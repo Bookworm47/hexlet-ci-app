@@ -8,7 +8,7 @@ jobs:
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/node@master
         env:
-          SNYK_TOKEN: ${{ secrets.sync_io }}
+          SNYK_TOKEN: d40594c1-be4c-4ecc-8de5-d0cfe2e04192
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
