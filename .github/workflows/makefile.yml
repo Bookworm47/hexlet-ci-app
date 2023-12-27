@@ -17,9 +17,6 @@ jobs:
     - name: configure
       run: make setup
 
-    - name: Make start
-      run: make start
-
     - name: Run check tests
       run: make test
 
