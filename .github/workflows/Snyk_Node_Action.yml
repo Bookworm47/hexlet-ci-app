@@ -7,6 +7,8 @@ jobs:
       - uses: actions/checkout@master
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/node@master
+        env:
+          SNYK_TOKEN: ${{ secrets.sync_io }}
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
@@ -14,6 +16,4 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npm test
-        env:
-          SNYK_TOKEN: ${{ secrets.sync_io }}
         
